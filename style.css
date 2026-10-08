@@ -129,7 +129,7 @@ a:focus-visible {
   margin-bottom: 20px;
 }
 
-/* ===== 4. ATRIBUTOS E HABILIDADES ===== */
+/* ATRIBUTOS E HABILIDADES */
 .lista-atributos {
   display: grid;
   gap: 20px;
@@ -240,7 +240,7 @@ a:focus-visible {
 .raridade-epico {background: var(--sombra);}
 .raridade-lendario {background: var(--ouro);}
 
-/* ===== 6. CONTATO ===== */
+/* CONTATO */
 .contato p {margin-bottom: 20px;}
 
 .botao {
@@ -260,7 +260,7 @@ a:focus-visible {
   transform: scale(1.05);
 }
 
-/* ===== 7. RODAPÉ ===== */
+/* RODAPÉ */
 .rodape {
   padding: 24px 20px;
   text-align: center;
@@ -269,8 +269,8 @@ a:focus-visible {
   border-top: 2px solid var(--ouro);
 }
 
-/* ===== 8. RESPONSIVIDADE (celular 1 coluna, tablet 2, desktop 3) ===== */
-@media (min-width: 600px) {
+/* RESPONSIVIDADE (celular 1 coluna, tablet 2, desktop 3) */
+@media (min-width: 600px);
   .sobre {
     flex-direction: row;
     align-items: flex-start;
