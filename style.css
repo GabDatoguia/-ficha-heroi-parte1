@@ -1,0 +1,292 @@
+/* VARIÁVEIS E BASE */
+:root {
+  --fundo: #14110f;
+  --fundo-card: #211a16;
+  --pergaminho: #e8dcc0;
+  --texto: #eadfc8;
+  --ouro: #d4af5a;
+  --vinho: #8b3a3a;
+  --sombra: #9b84e0;
+  --fonte-titulo: 'Cinzel', serif;
+  --fonte-texto: 'EB Garamond', Georgia, serif;
+  --raio: 10px;
+}
+
+* { box-sizing: border-box; margin: 0; }
+
+body {
+  background: var(--fundo);
+  color: var(--texto);
+  font-family: var(--fonte-texto);
+  font-size: 1.15rem;
+  line-height: 1.7;
+}
+
+h1, h2, h3 {
+  font-family: var(--fonte-titulo);
+  color: var(--ouro);
+  line-height: 1.2;
+}
+h2 {
+  font-size: 1.7rem;
+  margin-bottom: 24px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--vinho);
+}
+h3 {
+  font-size: 1.15rem;
+  margin-bottom: 8px;
+}
+p + p {
+  margin-top: 12px;
+}
+
+section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 48px 20px;
+  scroll-margin-top: 70px;
+}
+
+a:focus-visible {
+  outline: 3px solid var(--sombra);
+  outline-offset: 3px;
+}
+
+/* CABEÇALHO E MENU (Flexbox) */
+.topo {
+  position: sticky; top: 0; z-index: 10;
+  background: var(--fundo-card);
+  border-bottom: 2px solid var(--ouro);
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 6px 20px;
+}
+
+.logo {
+  font-family: var(--fonte-titulo);
+  font-weight: 700;
+  color: var(--ouro);
+}
+
+.menu ul {
+  display: flex;
+  gap: 4px; list-style: none;
+  padding: 0;
+}
+
+.menu a {
+  display: block;
+  min-height: 44px;
+  padding: 10px 14px;
+  color: var(--texto);
+  text-decoration: none;
+  border-radius: var(--raio);
+  transition: background-color .3s, transform .3s;
+}
+.menu a:hover {
+  background: var(--vinho);
+  transform: scale(1.05);
+}
+
+/* SOBRE O HERÓI */
+.sobre {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+}
+
+.avatar-moldura {
+  width: min(100%, 320px);
+  aspect-ratio: 3 / 4;
+  flex-shrink: 0;
+  overflow: hidden;
+  background: var(--pergaminho);
+  border: 4px double var(--ouro);
+  border-radius: var(--raio);
+}
+.avatar-moldura img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  mix-blend-mode: multiply;
+}
+
+.sobre h1 {font-size: 2.6rem;}
+.classe {
+  color: var(--sombra);
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+/* ===== 4. ATRIBUTOS E HABILIDADES ===== */
+.lista-atributos {
+  display: grid;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin-bottom: 36px;
+}
+
+.atributo-topo {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--fonte-titulo);
+  color: var(--ouro);
+  margin-bottom: 6px;
+}
+
+.barra {
+  height: 18px;
+  overflow: hidden;
+  background: #0c0a09;
+  border: 1px solid var(--ouro);
+  border-radius: 20px;
+}
+.barra-preenchimento {
+  height: 100%;
+  background: linear-gradient(90deg, var(--vinho), var(--ouro));
+  border-radius: 20px;
+}
+.forca {width: 50%;}
+.magia {width: 100%;}
+.defesa {width: 70%;}
+.velocidade {width: 80%;}
+
+.habilidades {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+}
+.habilidades li {
+  padding: 4px 14px;
+  border: 1px solid var(--sombra);
+  border-radius: 20px;
+  color: var(--sombra);
+}
+
+/* INVENTÁRIO (Grid) */
+.grade-inventario {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+}
+
+.card-item {
+  position: relative;
+  padding: 20px;
+  background: var(--fundo-card);
+  border: 2px solid var(--vinho);
+  border-radius: var(--raio);
+  transition: background-color .3s, transform .3s;
+}
+.card-item:hover {
+  background: #33271f;
+  transform: scale(1.03);
+}
+
+/* selo decorativo no canto do card */
+.card-item::before {
+  content: "";
+  position: absolute; top: 12px; right: 12px;
+  width: 12px; height: 12px;
+  border: 2px solid var(--ouro);
+  transform: rotate(45deg);
+}
+
+.item-destaque {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border-color: var(--ouro);
+}
+.item-destaque .arte {
+  width: min(100%, 220px);
+  background: var(--pergaminho);
+  border-radius: var(--raio);
+  overflow: hidden;
+}
+.item-destaque .arte img {
+  display: block;
+  width: 100%;
+  mix-blend-mode: multiply;
+}
+
+.raridade {
+  display: inline-block;
+  margin-bottom: 8px;
+  padding: 0 12px;
+  border-radius: 20px;
+  font-size: .95rem;
+  font-weight: 600;
+  color: #14110f;
+}
+.raridade-comum {background: #b9b2a5;}
+.raridade-raro {background: #7fb2e5;}
+.raridade-epico {background: var(--sombra);}
+.raridade-lendario {background: var(--ouro);}
+
+/* ===== 6. CONTATO ===== */
+.contato p {margin-bottom: 20px;}
+
+.botao {
+  display: inline-flex; align-items: center; gap: 10px;
+  min-height: 48px; padding: 12px 26px;
+  background: var(--vinho);
+  color: var(--texto);
+  font-family: var(--fonte-titulo);
+  text-decoration: none;
+  border: 2px solid var(--ouro);
+  border-radius: var(--raio);
+  transition: background-color .3s, color .3s, transform .3s;
+}
+.botao:hover {
+  background: var(--ouro);
+  color: var(--fundo);
+  transform: scale(1.05);
+}
+
+/* ===== 7. RODAPÉ ===== */
+.rodape {
+  padding: 24px 20px;
+  text-align: center;
+  font-size: .95rem;
+  color: #b8ad98;
+  border-top: 2px solid var(--ouro);
+}
+
+/* ===== 8. RESPONSIVIDADE (celular 1 coluna, tablet 2, desktop 3) ===== */
+@media (min-width: 600px) {
+  .sobre {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .grade-inventario {grid-template-columns: repeat(2, 1fr);}
+  .item-destaque {
+    grid-column: 1 / -1;
+    flex-direction: row;
+    align-items: center;
+  }
+  .lista-atributos {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 40px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .grade-inventario { grid-template-columns: repeat(3, 1fr); }
+}

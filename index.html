@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ficha de herói de Aion Veyr, mago de memória fotográfica que envelheceu estudando.">
+  <title>Ficha de Herói — Aion Veyr</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=EB+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Cabeçalho e menu -->
+  <header class="topo">
+    <nav class="menu" aria-label="Navegação principal">
+      <span class="logo"><i class="fa-solid fa-hat-wizard" aria-hidden="true"></i>Aion Veyr</span>
+      <ul>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#atributos">Atributos</a></li>
+        <li><a href="#inventario">Inventário</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- Sobre o Herói -->
+    <section id="sobre" class="sobre">
+      <div class="avatar-moldura">
+        <img src="imagens/avatar.png" alt="Ilustração de Aion Veyr: mago idoso de cabelo e barba brancos, braços cruzados, camisa vinho e cinto largo.">
+      </div>
+      <div class="sobre-texto">
+        <h1>Aion Veyr</h1>
+        <p class="classe">Mago arquivista · 25 anos, aparenta 60</p>
+        <h2>Sobre o Herói</h2>
+        <p>Órfão aos 5 anos, já guardava tudo o que via: nomes, rotinas, receitas. Ao ver um exorcismo na vizinhança, seguiu o exorcista, que o adotou como discípulo e abriu sua biblioteca de magia para que o menino pudesse aprender.</p>
+        <p>Aos 10 anos já era um mago renomado e invejado pelo Congresso dos Magos. Numa noite, sua casa pegou fogo por conta de um ataque e nem as magias de água salvaram o mestre, que lhe deixou uma chave e um mapa.</p>
+        <p>O mapa levou a uma caverna escondida por ilusão, só quem portava a chave poderia adentrar nessa caverna, cheia de livros proibidos que o Congresso dizia ter destruído. Lá dentro, 1 hora fora vale 1 ano. Assim, Aion Veyr se tornou um dos magos mais poderosos da história em apenas alguns instantes no lado de fora, mas lá dentro, havia passado décadas.</p>
+      </div>
+    </section>
+
+    <!-- Atributos e Habilidades -->
+    <section id="atributos">
+      <h2>Atributos &amp; Habilidades</h2>
+      <ul class="lista-atributos">
+        <li class="atributo">
+          <div class="atributo-topo"><span><i class="fa-solid fa-hand-fist" aria-hidden="true"></i> Força</span><span>5/10</span></div>
+          <div class="barra" role="progressbar" aria-label="Força" aria-valuenow="5" aria-valuemin="0" aria-valuemax="10"><div class="barra-preenchimento forca"></div></div>
+        </li>
+        <li class="atributo">
+          <div class="atributo-topo"><span><i class="fa-solid fa-wand-sparkles" aria-hidden="true"></i> Magia</span><span>10/10</span></div>
+          <div class="barra" role="progressbar" aria-label="Magia" aria-valuenow="10" aria-valuemin="0" aria-valuemax="10"><div class="barra-preenchimento magia"></div></div>
+        </li>
+        <li class="atributo">
+          <div class="atributo-topo"><span><i class="fa-solid fa-shield-halved" aria-hidden="true"></i> Defesa</span><span>7/10</span></div>
+          <div class="barra" role="progressbar" aria-label="Defesa" aria-valuenow="7" aria-valuemin="0" aria-valuemax="10"><div class="barra-preenchimento defesa"></div></div>
+        </li>
+        <li class="atributo">
+          <div class="atributo-topo"><span><i class="fa-solid fa-person-running" aria-hidden="true"></i> Velocidade</span><span>8/10</span></div>
+          <div class="barra" role="progressbar" aria-label="Velocidade" aria-valuenow="8" aria-valuemin="0" aria-valuemax="10"><div class="barra-preenchimento velocidade"></div></div>
+        </li>
+      </ul>
+      <h3>Habilidades</h3>
+      <ul class="habilidades">
+        <li>Memória fotográfica</li>
+        <li>Magia de todos os tipos</li>
+        <li>Exorcismo</li>
+        <li>Rituais e selos</li>
+      </ul>
+    </section>
+
+    <!-- INVENTÁRIO E CONQUISTAS -->
+    <section id="inventario">
+      <h2>Inventário &amp; Conquistas</h2>
+      <ul class="grade-inventario">
+        <li class="card-item item-destaque">
+          <div class="arte">
+            <img src="imagens/anel-das-sombras.png" alt="Ilustração do Anel das Sombras: anel de prata envolto em fumaça roxa que forma uma lâmina curva.">
+          </div>
+          <div>
+            <h3><i class="fa-solid fa-ring" aria-hidden="true"></i> Anel das Sombras</h3>
+            <span class="raridade raridade-lendario">Lendário</span>
+            <p>Permite conjurar objetos de uma dimensão da sombras, como a lâmina de fumaça roxa da ilustração ou itens guardados nessa dimensão.</p>
+          </div>
+        </li>
+        <li class="card-item">
+          <h3><i class="fa-solid fa-book" aria-hidden="true"></i> Livro de rituais</h3>
+          <span class="raridade raridade-raro">Raro</span>
+          <p>Rituais já escritos de invocação, cura, elementos e selos de aprisionamento, prontos para uso sem perder tempo.</p>
+        </li>
+        <li class="card-item">
+          <h3><i class="fa-solid fa-cross" aria-hidden="true"></i> Cruz de prata benta</h3>
+          <span class="raridade raridade-raro">Raro</span>
+          <p>Benzida pelo papa e roubada de um colecionador. Serve para exorcismos.</p>
+        </li>
+        <li class="card-item">
+          <h3><i class="fa-solid fa-flask" aria-hidden="true"></i> Água benta</h3>
+          <span class="raridade raridade-comum">Comum</span>
+          <p>Frasco de proteção contra demônios, vampiros e outros seres macabros.</p>
+        </li>
+        <li class="card-item">
+          <h3><i class="fa-solid fa-fire" aria-hidden="true"></i> Velas rituais</h3>
+          <span class="raridade raridade-comum">Comum</span>
+          <p>Materiais de magia para montar círculos e rituais em qualquer lugar.</p>
+        </li>
+        <li class="card-item">
+          <h3><i class="fa-solid fa-key" aria-hidden="true"></i> Chave do mestre</h3>
+          <span class="raridade raridade-epico">Épico</span>
+          <p>Última herança do mestre, que levou Aion à caverna dos livros proibidos.</p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Contato com a Guilda -->
+    <section id="contato" class="contato">
+      <h2>Contato com a Guilda</h2>
+      <p>Precisa de um ritual, um exorcismo ou um conselho de quem leu tudo? Envie uma mensagem para a guilda.</p>
+      <a class="botao" href="mailto:datoguiagabriel@gmail.com"><i class="fa-solid fa-envelope" aria-hidden="true"></i> Enviar e-mail</a>
+    </section>
+
+  </main>
+
+  <!-- Rodapé -->
+  <footer class="rodape">
+    <p>© 2026 Aion Veyr · Projeto de Tecnologia Web</p>
+    <p>Arte do anel: Tyler Vail. Ilustração do avatar: autoria a creditar.</p>
+  </footer>
+
+</body>
+</html>
